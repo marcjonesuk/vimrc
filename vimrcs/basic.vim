@@ -382,3 +382,5 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 
 set mouse=a
+map <c-tab> :tabnext<cr>
+map <s-tab> :tabprev<cr>
