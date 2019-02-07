@@ -381,8 +381,12 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
+let MRU_Window_Height = 15 
+set number
 set mouse=a
-map <c-t> :tabnew<cr>
+map <tab> :tabnext<cr>
+map <S-tab> :tabprev<cr>
+map <c-t> :tabnew<cr><c-m>
 map <c-w> :tabclose<cr>
 map <c-q> :q<cr>
 map <F1> 1gt
