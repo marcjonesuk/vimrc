@@ -381,9 +381,14 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-let MRU_Window_Height = 15 
+set tabstop=2
+set shiftwidth=2
+let MRU_Window_Height = 20 
 set number
 set mouse=a
+map <c-m> :MRU<cr>
+let NERDTreeShowHidden=1
+map <c-o> :NERDTreeToggle<cr>
 map <tab> :tabnext<cr>
 map <S-tab> :tabprev<cr>
 map <c-t> :tabnew<cr><c-m>
@@ -402,5 +407,4 @@ map <F10> 10gt
 map <F11> 11gt
 map <F12> :tabnew 
 
-map <c-m> :MRU<cr>
 
